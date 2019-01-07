@@ -13,47 +13,20 @@
 
 
 
-	<title>index.html</title>
+	<title>signup.html</title>
 </head>
 
 <body>
 	<div class="container-fluid">
-		<h1>Hello World!</h1>
+	
+		<form id="signup" method="post" action="{% url 'signup' %}">
+			{% csrf_token %}
+			{{ userform.as_p}}
+			
 
-			<div>
-				1: {{ posts }}
-			</div>
-		
-			<hr>
+		</form>
+			
 
-			<div>
-				{% for post in posts %}
-				2: {{ post }}
-				{% endfor %}
-			</div>
-			<hr>
-
-			{% for post in posts %}
-			<div>
-				3: 
-				<p>published: {{ post.published_date }}</p>
-				<h1><a href="">{{ post.title }}</a></h1>
-				<p>{{ post.text|linebreaksbr }}</p>
-			</div>
-			{% endfor %}
-			<hr>
-		
-		<div>
-			<p>published: 14.06.2014, 12:14</p>
-			<h2><a href="">My first post</a></h2>
-			<p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-		</div>
-
-		<div>
-			<p>published: 14.06.2014, 12:14</p>
-			<h2><a href="">My second post</a></h2>
-			<p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut f.</p>
-		</div>
 
 	</div>   
 

@@ -14,3 +14,7 @@ def index (request):
 def aerial (request):
 	
 	return render(request, 'blog/aerial.html')
+
+
+
+
